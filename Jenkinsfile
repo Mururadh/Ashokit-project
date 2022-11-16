@@ -4,7 +4,8 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], user
 
 node{
 	stage ("git-clone")
-	echo " Pulling changes from branch $(params.branch)
-	git url: "https://github.com/Mururadh/Ashokit-project.git", branch: "$(params.branch)"
-
+	{
+		echo " Pulling changes from branch $(params.branch)
+		git url: "https://github.com/Mururadh/Ashokit-project.git", branch: "$(params.branch)"
+	}
 }
