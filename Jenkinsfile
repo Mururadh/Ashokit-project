@@ -5,7 +5,7 @@ properties([parameters([choice(choices: ['master', 'feature-1', 'feature-2'], na
 node{
 	stage ("git-clone")
 	{
-		echo " Pulling changes from branch $(params.branch)
+		echo " Pulling changes from branch $(params.branch)"
 		git url: "https://github.com/Mururadh/Ashokit-project.git", branch: "$(params.branch)"
 	}
 }
