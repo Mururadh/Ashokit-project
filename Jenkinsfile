@@ -10,13 +10,8 @@ node ("medium")
 		{
 		echo "**** Compiling the code*****"
 		sh 'mvn -v'
-		docker.image('maven:3.8.6').inside
-			{ 
-	                 	sh 'pwd'
-	                 	echo "Inside Maven container "
-	                 	sh 'mvn -v'
-	                	sh 'mvn clean package'
-           	         }
+		sh 'mvn clean package'
+           	        
 		}
 	
 		
