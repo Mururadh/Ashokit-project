@@ -15,7 +15,8 @@ node ("medium")
 		stage("push to nexus")
 		{
 		 	echo "pulling code from medium slave "
-			stage ("Push Nexus"){
+			stage ("Push Nexus")
+			{
   echo " Pushing to nexus Now "
   sh """mvn -U org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy-file -DgroupId=in.ashokit \
   -DartifactId=01-maven-web-app \
@@ -28,4 +29,5 @@ node ("medium")
 		}
 
 		
+}
 }
