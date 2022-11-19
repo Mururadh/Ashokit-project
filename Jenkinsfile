@@ -9,7 +9,7 @@ node ("medium")
 	  stage ("Maven build code")
 		{
           		echo "** Testing the code***"
-          		sh 'mvn clean package'
+          		sh 'mvn -v'
 		}
 
 		
