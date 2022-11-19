@@ -1,4 +1,4 @@
-node (medium)
+node ("medium")
 {
 	stage ("git-clone")
 	{
