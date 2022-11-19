@@ -6,13 +6,11 @@ node ("medium")
 	         checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/Mururadh/Ashokit-project.git']]]) 
 	}
 	
-	stage ("maven-build")
+	  stage ("Maven build code")
 		{
-		echo "**** Compiling the code*****"
-		sh 'mvn -v'
-		sh 'mvn clean package'
-           	        
+          		echo "** Testing the code***"
+          		sh 'mvn clean package'
 		}
-	
+
 		
 }
